@@ -30,7 +30,7 @@ pdfkeywords={black hole entropy, horizon measurement, Weyl curvature, holographi
     and \\
     Srinivasa Ramanujan (1887--1920)}
 \end{center}
-\vspace{0.5cm} % Reduced spacing for a more standard look
+\vspace{0.5cm}
 
 \begin{abstract}
 If black hole entropy follows the Boltzmann formula $S = \ln \Omega$, what microstates does $\Omega$ count? For a Schwarzschild black hole, this question is sharpened by a fundamental constraint: microstates must be distinguishable by measurement.
@@ -39,7 +39,7 @@ We propose that the microstates are distinct, holistic configurations of curvatu
 
 \section{Introduction}
 
-The Boltzmann formula $S = \ln \Omega$ presents a profound challenge when applied to black holes: what are the microstates counted by $\Omega$? For a Schwarzschild black hole—classically featureless and characterized only by mass and area—this question becomes particularly acute. The challenge is sharpened by an essential physical principle: for microstates to be meaningful, they must be \emph{distinguishable} through measurement \cite{Bekenstein1972, Bekenstein1973}.
+The Boltzmann formula $S = \ln \Omega$ presents a profound challenge when applied to black holes: what are the microstates counted by $\Omega$? For a Schwarzschild black hole (classically featureless and characterized only by mass and area) this question becomes particularly acute. The challenge is sharpened by an essential physical principle: for microstates to be meaningful, they must be \emph{distinguishable} through measurement \cite{Bekenstein1972, Bekenstein1973}.
 
 We therefore ask: \textbf{What could the Boltzmann microstates of a Schwarzschild black hole possibly be, given that the defining feature of a microstate is that we can measure it?}
 
@@ -66,15 +66,15 @@ We propose that the probe measures discrete units of \emph{curvature correlation
 
 Conceptually, the horizon possesses $N = A/\ell_P^2$ Planck areas. The gravitational degrees of freedom are not localized to these areas but are embodied in curvature correlations \emph{between} them. In this picture, the fundamental degrees of freedom are not the $N$ Planck areas themselves, but the $O(N^2)$ potential correlations \emph{between} them, of which only a fixed fraction $k$ are accessible and distinguishable. The horizon behaves like a dynamical phase grating, where different configurations of these correlations impart distinct phase shifts or scattering patterns on the grazing probe, making them distinguishable through wave interference effects.
 
-\subsection{Weyl Curvature and the Accessible Wedge}
+\subsection{Weyl Curvature, the Accessible Wedge, and the Scaling of \( n \)}
 
-In the Schwarzschild metric, the only non-trivial curvature is encoded in the Weyl tensor. In an orthonormal frame, the radially dependent Weyl curvature component behaves as
+We now provide the physical argument that leads to the crucial scaling relation $n \propto N^2$. In the Schwarzschild metric, the only non-trivial curvature is encoded in the Weyl tensor. In an orthonormal frame, the radially dependent Weyl curvature component behaves as
 \[
 \Psi \sim \frac{M}{r^3}.
 \]
-Setting $M=1$ in Planck units yields the shell curvature $1/r^3$ referenced in the introduction.
+Setting $M=1$ in Planck units yields the characteristic curvature $1/r^3$.
 
-A massless probe on a grazing null geodesic near the photon sphere ($r = 3M$) can only access a limited solid angle of the horizon's curvature configurations. The fraction of the celestial sphere (as seen from the photon sphere) from which photons can escape to infinity is given by the escape cone solid angle \cite{MTW1973}. For an observer at radius $r_0$, the escape cone half-angle $\alpha_c$ satisfies
+A massless probe on a grazing null geodesic can only access a limited solid angle of the horizon's curvature configurations. The fraction of the celestial sphere from which photons can escape to infinity is given by the escape cone solid angle \cite{MTW1973}. For an observer at radius $r_0$, the escape cone half-angle $\alpha_c$ satisfies
 \[
 \sin \alpha_c = \frac{3\sqrt{3}M \sqrt{1 - 2M/r_0}}{r_0}.
 \]
@@ -84,26 +84,22 @@ F = \frac{\Delta\Omega_{\text{escape}}}{4\pi} \approx \frac{27}{4 r_0^2}.
 \]
 If we take the outermost possible grazing orbit $r_0 \to 3M$, then $F \to 1/2$.
 
-Since the probe measures correlations \emph{between} horizon elements, the number of accessible correlation units $n$ should scale with the number of resolvable \emph{pairs} of elements within the accessible wedge. If the probe can resolve $\sim FN$ elements, then the number of independent \emph{pairwise correlations} between those elements scales as the number of ways to choose two distinct elements, which is $\sim (FN)^2$. Thus, $n$ is proportional to $N^2$, and we write:
-\[
+Since the probe measures correlations \emph{between} horizon elements, the number of accessible correlation units $n$ should scale with the number of resolvable \emph{pairs} of elements within the accessible wedge. If the probe can resolve $\sim FN$ elements, then the number of independent \emph{pairwise correlations} between those elements scales as the number of ways to choose two distinct elements, which is $\sim (FN)^2$. 
+
+This physical argument leads us to postulate that the number of distinguishable correlation units scales quadratically with the number of Planck areas:
+\begin{equation}
 n = k N^2,
-\]
-where $k$ is a dimensionless constant to be determined.
+\end{equation}
+where $k$ is a dimensionless constant that encapsulates geometric factors like the accessible fraction $F$. We will now determine $k$ uniquely by requiring consistency with the Bekenstein-Hawking area law.
 
-Matching the Hardy–Ramanujan asymptotic entropy $\ln p(n) \sim \pi \sqrt{2n/3}$ to the Bekenstein–Hawking entropy $N/4$ yields
-\[
-\pi \sqrt{\frac{2n}{3}} = \frac{N}{4} \quad \Rightarrow \quad n = \frac{3}{32\pi^2} N^2.
-\]
-Thus, the constant $\frac{3}{32\pi^2}$ is the fraction of all possible pairwise horizon correlations that are distinguishable by a grazing null geodesic, given the $1/r^3$ falloff of the Weyl curvature.
-
-\subsection{Combinatorial Derivation}
+\subsection{Combinatorial Derivation and Entropy Matching}
 
 The integer partition function $p(n)$ has the Hardy-Ramanujan asymptotic form for large $n$ \cite{Hardy1918}:
 \begin{equation}\label{eq:partition}
 p(n) \sim \frac{1}{4n\sqrt{3}} \exp\left( \pi \sqrt{\frac{2n}{3}} \right).
 \end{equation}
 The thermodynamic entropy is therefore:
-\begin{equation}
+\begin{equation}\label{eq:entropy_asymptotic}
 S = \ln p(n) \sim \pi \sqrt{\frac{2n}{3}} - \ln(4n\sqrt{3}).
 \end{equation}
 
@@ -112,19 +108,25 @@ The Bekenstein-Hawking law requires \cite{Bekenstein1972, Hawking1975}:
 S = \frac{A}{4\ellp^2} \equiv \frac{N}{4}, \quad \text{where} \quad N = \frac{A}{\ellp^2}.
 \end{equation}
 
-Equating the leading terms gives:
+Substituting our scaling relation $n = k N^2$ into the leading term of equation (\ref{eq:entropy_asymptotic}) and equating to the Bekenstein-Hawking entropy gives:
 \begin{equation}\label{eq:leading}
-\pi \sqrt{\frac{2n}{3}} = \frac{N}{4}.
+\pi \sqrt{\frac{2k N^2}{3}} = \frac{N}{4}.
 \end{equation}
-Solving for $n$ yields:
+Solving for $k$ yields:
+\begin{equation}\label{eq:k_relation}
+\pi N \sqrt{\frac{2k}{3}} = \frac{N}{4} \quad \Rightarrow \quad \sqrt{\frac{2k}{3}} = \frac{1}{4\pi} \quad \Rightarrow \quad k = \frac{3}{32\pi^2}.
+\end{equation}
+Thus, we obtain the precise relation:
 \begin{equation}\label{eq:n_relation}
 n = \frac{3}{32\pi^2} N^2 = \frac{3}{32\pi^2} \left( \frac{A}{\ellp^2} \right)^2.
 \end{equation}
 
-This quadratic scaling, $n \propto N^2$, emerges from the entropy constraint. Substituting back into the full asymptotic expression gives the entropy:
+This value of $k = \frac{3}{32\pi^2}$ emerges uniquely from matching the asymptotic form of the partition function to the Bekenstein-Hawking law. It represents the fraction of the total $N^2$ possible pairwise correlations that are measurable by a single grazing null geodesic, given the constraints of the Schwarzschild geometry and the $1/r^3$ Weyl curvature falloff.
+
+Substituting back into the full asymptotic expression gives the complete entropy formula:
 \begin{align}
-S &\sim \frac{N}{4} - \ln\left(4 \sqrt{3} \cdot \frac{3}{32\pi^2} N^2 \right) \\
-&= \frac{A}{4\ellp^2} - 2 \ln\left( \frac{A}{\ellp^2} \right) + \mathcal{O}(1).
+S &\sim \frac{N}{4} - \ln\left(4 \sqrt{3} \cdot \frac{3}{32\pi^2} N^2 \right) \nonumber \\
+&= \frac{A}{4\ellp^2} - 2 \ln\left( \frac{A}{\ellp^2} \right) + \mathcal{O}(1). \label{eq:entropy_corrected}
 \end{align}
 
 The model thus predicts a universal logarithmic correction:
@@ -156,10 +158,12 @@ The derived relation $n \propto N^2$ suggests that fundamental degrees of freedo
 \midrule
 \textbf{This Work} & \textbf{-2} \\
 Loop Quantum Gravity \cite{Kaul2000} & $-\frac{3}{2}$ \\
-String Theory \cite{Sen2012} & $-1 \text{ or } -\frac{3}{2}$\footnote{String theory predictions vary depending on the specific black hole solution and counting method.} \\
+String Theory \cite{Sen2012} & $-1 \text{ or } -\frac{3}{2}$\textsuperscript{\,a} \\
 Euclidean Path Integral \cite{Gibbons1978} & $-\frac{3}{2}$ \\
 \bottomrule
 \end{tabular}
+\smallskip
+\footnotesize\textsuperscript{a}String theory predictions vary depending on the specific black hole solution and counting method.
 \end{table}
 
 This work presents a combinatorial observation grounded in measurement theory rather than a complete quantum gravity theory. The match between the Hardy-Ramanujan formula and the Bekenstein-Hawking law may guide fundamental theories where horizon microstates are characterized by distinguishable correlation patterns.
@@ -173,34 +177,6 @@ This approach reproduces the Bekenstein-Hawking area law exactly and predicts a 
 This perspective naturally leads to a compelling question: \textbf{Could the entropy of a static, featureless horizon be fundamentally an information-theoretic consequence of its measurable geometry?}
 
 While quantum gravity remains essential for understanding dynamics and evaporation, our results suggest that equilibrium entropy might be determined by combinatorial possibilities of holographic encoding that are prior to any specific quantum geometric realization. If correct, the Bekenstein-Hawking formula may represent a universal law of information capacity for null surfaces, derivable from geometry, information theory, and number theory.
-
-\section*{Appendix: Derivation of $3/(32\pi^2)$ from Geodesic Measurement}
-
-Consider a Schwarzschild black hole with mass $M=1$ in Planck units. A photon sphere exists at $r = 3$. A grazing null geodesic at $r_0 \gg 3$ accesses a fraction $F$ of the full $4\pi$ solid angle:
-\[
-F \approx \frac{27}{4 r_0^2}.
-\]
-The number of horizon Planck areas is $N = A/\ellp^2 = 16\pi M^2 = 16\pi$. The number of distinguishable curvature correlation units $n$ should scale as the number of resolvable pairs of horizon elements within the accessible wedge:
-\[
-n \propto (F N)^2.
-\]
-Up to a geometric factor, this becomes $n = k N^2$, where $k$ is a dimensionless constant.
-
-Now impose the Bekenstein–Hawking entropy condition:
-\[
-S = \ln p(n) \approx \pi \sqrt{\frac{2n}{3}} - \ln(4n\sqrt{3}) = \frac{N}{4}.
-\]
-Equating the leading terms:
-\[
-\pi \sqrt{\frac{2n}{3}} = \frac{N}{4}.
-\]
-Squaring both sides:
-\[
-\frac{2\pi^2 n}{3} = \frac{N^2}{16} \quad \Rightarrow \quad n = \frac{3}{32\pi^2} N^2.
-\]
-Thus, $k = \frac{3}{32\pi^2}$ emerges uniquely from matching the asymptotic form of the partition function to the Bekenstein–Hawking law.
-
-This constant represents the fraction of the total $N^2$ possible pairwise correlations that are measurable by a single grazing null geodesic, given the constraints of the Schwarzschild geometry and the $1/r^3$ Weyl curvature falloff.
 
 \section*{Acknowledgments}
 The author thanks the developers of mathematical software tools used for verification. Helpful conversations with the research community are appreciated.
