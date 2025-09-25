@@ -1,6 +1,4 @@
-# The Holographic Language of Horizons
-
-**Deriving Bekenstein-Hawking Entropy from Conformal Curvature Partitions**
+# The Measurement Interpretation of Black Hole Entropy: A Grazing Photon's Limited View
 
 This repository contains the LaTeX source for the paper proposing a geometric-informational derivation of black hole entropy via integer partitions of conformal curvature correlations.
 
