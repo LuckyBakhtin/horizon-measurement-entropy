@@ -24,7 +24,7 @@ We propose an operational interpretation of the Bekenstein-Hawking entropy $S_{\
 
 \section{Introduction: Entropy as Accessible Information}
 
-The Bekenstein-Hawking entropy, $S_{\mathrm{BH}} = A/(4\ell_P^2)$, is widely regarded as counting the microstates of a black hole. Holography suggests these microstates reside on the horizon, but this raises a practical question: how much of this information can an external observer actually measure?
+The Bekenstein-Hawking entropy, $S_{\mathrm{BH}} = A/(4\ell_P^2)$, is widely regarded as counting the microstates of a black hole \cite{bekenstein1973, hawking1975}. Holography suggests these microstates reside on the horizon \cite{thooft1993, susskind1995}, but this raises a practical question: how much of this information can an external observer actually measure?
 
 We reframe the problem in operational terms: rather than deriving $S_{\mathrm{BH}}$ from first principles, we ask what the entropy implies about the \emph{limitations of measurement} at the horizon. Consider a massless probe on a grazing null geodesic—a photon skimming the event horizon. This probe has a finite proper time to interact with the horizon before being captured. What can it learn?
 
@@ -58,7 +58,7 @@ S_{\mathrm{meas}} = \ln p(n).
 
 \subsection{The Hardy–Ramanujan Asymptotic}
 
-For large $n$, the partition function satisfies:
+For large $n$, the partition function satisfies \cite{hardy1918}:
 \begin{equation}
 p(n) \sim \frac{1}{4n\sqrt{3}} \exp\left( \pi \sqrt{\frac{2n}{3}} \right),
 \quad
@@ -96,7 +96,7 @@ Substituting $n$ back into the full asymptotic form yields:
 \[
 S_{\mathrm{meas}} \sim \frac{N}{4} - 2\ln N + \ln\left(\frac{8\pi^{2}}{3^{3/2}}\right) + \mathcal{O}(1/N),
 \]
-a universal logarithmic correction with coefficient $-2$ and a constant term $\ln(8\pi^{2}/3^{3/2}) \approx 2.72098$.
+a universal logarithmic correction with coefficient $-2$ and a constant term $\ln(8\pi^{2}/3^{3/2}) \approx 2.72098$. This contrasts with other approaches to black hole entropy corrections \cite{cardy1986, page1993}.
 
 \paragraph{Remark on $e$:} The natural exponential arises because the Hardy–Ramanujan formula contains $\exp(\pi\sqrt{2n/3})$. Inverting that relation and taking logarithms inevitably introduces $\ln$ terms. The tidy combination of $\ln 2$, $\ln 3$, and $\ln \pi$ into $\ln(8\pi^2/3^{3/2})$ shows why $e$ appears so naturally.
 
@@ -124,15 +124,22 @@ Euclidean Path Integral & $-3/2$ \\
 \end{tabular}
 \end{table}
 
-The difference suggests that operational accessibility may impose stronger constraints than microstate counting alone.
+The difference suggests that operational accessibility may impose stronger constraints than microstate counting alone \cite{wald2001}.
 
 \section{Conclusion}
 
-We have shown that the Bekenstein-Hawking entropy can be interpreted as the information accessible to a grazing photon, limited by horizon causality. The measurable correlation patterns are counted by partitions, yielding $n \approx 0.009499 N^2$ and a logarithmic correction of $-2$. This approach reframes black hole entropy in operational terms and highlights the role of measurement limits in thermodynamics.
+We have shown that the Bekenstein-Hawking entropy can be interpreted as the information accessible to a grazing photon, limited by horizon causality. The measurable correlation patterns are counted by partitions, yielding $n \approx 0.009499 N^2$ and a logarithmic correction of $-2$. This approach reframes black hole entropy in operational terms and highlights the role of measurement limits in thermodynamics \cite{boltzmann1877}.
 
 \begin{thebibliography}{9}
 \bibitem{bekenstein1973} Bekenstein, J. D. (1973). \textit{Physical Review D}, 7(8), 2333–2346.
 \bibitem{hawking1975} Hawking, S. W. (1975). \textit{Communications in Mathematical Physics}, 43(3), 199–220.
+\bibitem{boltzmann1877} Boltzmann, L. (1877). \textit{Über die Beziehung zwischen dem zweiten Hauptsatze der mechanischen Wärmetheorie und der Wahrscheinlichkeitsrechnung}. Wiener Berichte, 76, 373–435.
+\bibitem{hardy1918} Hardy, G. H., and Ramanujan, S. (1918). \textit{Asymptotic formulae in combinatory analysis}. Proceedings of the London Mathematical Society, 17, 75–115.
+\bibitem{thooft1993} 't Hooft, G. (1993). \textit{Dimensional reduction in quantum gravity}. In \textit{Salamfestschrift}, edited by A. Ali et al., World Scientific, 284–296.
+\bibitem{susskind1995} Susskind, L. (1995). \textit{The world as a hologram}. Journal of Mathematical Physics, 36, 6377–6396.
+\bibitem{wald2001} Wald, R. M. (2001). \textit{The thermodynamics of black holes}. Living Reviews in Relativity, 4, 6.
+\bibitem{cardy1986} Cardy, J. L. (1986). \textit{Operator content of two-dimensional conformally invariant theories}. Nuclear Physics B, 270, 186–204.
+\bibitem{page1993} Page, D. N. (1993). \textit{Information in black hole radiation}. Physical Review Letters, 71, 3743–3746.
 \end{thebibliography}
 
 \end{document}
